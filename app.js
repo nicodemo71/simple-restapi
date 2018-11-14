@@ -16,7 +16,7 @@ app.use(cookieParser())
 app.get('/', (req, res) => {
     // Cookies that have not been signed
     console.log('Cookies: ', req.cookies)
-    res.cookie("SESSIONID", new Date().getDate())
+    res.cookie("SESSIONID", new Date().getTime())
     res.send('Rest Api is running')
 })
 
