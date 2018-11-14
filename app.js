@@ -5,6 +5,8 @@ const port = 3000
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 
+const cors = require('cors')
+
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false}))
 
@@ -12,6 +14,8 @@ app.use(bodyParser.urlencoded({ extended: false}))
 app.use(bodyParser.json())
 
 app.use(cookieParser())
+
+app.use(cors())
 
 app.get('/', (req, res) => {
     // Cookies that have not been signed
